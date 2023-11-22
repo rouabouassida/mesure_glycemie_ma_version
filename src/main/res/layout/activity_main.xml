@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ba"
+    android:orientation="vertical"
+    android:padding="20sp"
+    tools:context=".view.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/playfair_display"
+        android:text="Mesure de niveau de Glycemie"
+        android:textAlignment="center"
+        android:textColor="#F48FB1"
+        android:textSize="40sp"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="20dp" />
+
+    <TextView
+        android:id="@+id/tvAge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/msgage"
+        android:textColor="#55609F"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="140dp" />
+
+    <SeekBar
+        android:id="@+id/sbAge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="120"
+        android:outlineAmbientShadowColor="@color/black"
+        tools:layout_editor_absoluteX="47dp"
+        tools:layout_editor_absoluteY="192dp" />
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/question"
+        android:textSize="30sp"
+        android:textColor="#55609F"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="230dp" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="-14dp"
+        tools:layout_editor_absoluteY="290dp">
+
+    </RadioGroup>
+
+    <RadioButton
+        android:id="@+id/rbIsFasting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#83F48FB1"
+        android:checked="true"
+        android:text="Oui"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="108dp"
+        tools:layout_editor_absoluteY="301dp" />
+
+    <RadioButton
+        android:id="@+id/rbIsNotFasting"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#83F48FB1"
+        android:checked="false"
+        android:text="non"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/rbIsFasting"
+        tools:layout_editor_absoluteY="369dp" />
+
+    <EditText
+        android:id="@+id/etValeur"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Valeur mesurée (en mmol/l)"
+        android:inputType="numberDecimal"
+        android:textSize="25sp"
+        tools:layout_editor_absoluteX="56dp"
+        tools:layout_editor_absoluteY="437dp" />
+
+    <Button
+        android:id="@+id/btnConsulter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#B39DDB"
+        android:onClick="calculer"
+        android:text="@string/bonton"
+        android:textSize="18dp"
+        tools:layout_editor_absoluteX="48dp"
+        tools:layout_editor_absoluteY="511dp" />
+
+    <TextView
+        android:id="@+id/tvResultat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/playfair_display"
+        android:text="..."
+        android:textAlignment="center"
+        android:textSize="50sp"
+        tools:layout_editor_absoluteX="58dp"
+        tools:layout_editor_absoluteY="579dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

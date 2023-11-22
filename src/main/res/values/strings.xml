@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Mesure_Glycemie_ma_version</string>
+    <string name="msgage">Votre Age</string>
+    <string name="question">Est-ce que vous jeuner</string>
+    <string name="bonton">CONSULTER</string>
+</resources>
